@@ -3,45 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CPC 06 (R2) - Arrendamentos</title>
+<title>Questão CPC 06 - Arrendamento</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:linear-gradient(180deg,#03152e,#062b5f,#03152e);
-  color:white;
+  background:linear-gradient(180deg,#06182f,#082f63,#06182f);
+  color:#fff;
 }
 
 .app{
   max-width:430px;
   margin:auto;
   min-height:100vh;
-  padding:16px;
+  padding:14px;
   padding-bottom:95px;
 }
 
 .header{
-  background:linear-gradient(135deg,#001f4d,#003b8f,#0057d9);
-  padding:24px 18px;
-  border-radius:26px;
+  background:linear-gradient(135deg,#001f4d,#004aad,#0077ff);
+  border:2px solid #70bdff;
+  border-radius:28px;
+  padding:24px 16px;
   text-align:center;
-  margin-bottom:18px;
-  border:2px solid #4da3ff;
+  margin-bottom:16px;
 }
 
 .header h1{
-  font-size:30px;
   margin:0;
-  line-height:1.2;
+  font-size:29px;
+  line-height:1.15;
 }
 
 .header p{
-  font-size:20px;
+  font-size:19px;
   margin:10px 0 0;
   font-weight:bold;
 }
@@ -51,49 +49,106 @@ body{
   background:#082b5f;
   border:2px solid #5bb0ff;
   border-radius:28px;
-  padding:26px 22px;
-  min-height:520px;
-  box-shadow:0 8px 22px rgba(0,0,0,.35);
+  padding:24px 20px;
+  min-height:545px;
+  box-shadow:0 10px 24px rgba(0,0,0,.35);
 }
 
-.card.active{
-  display:block;
-}
+.card.active{display:block;}
 
-.card h2{
-  font-size:30px;
+h2{
+  font-size:29px;
   margin-top:0;
-  color:#ffffff;
-  line-height:1.2;
+  line-height:1.18;
+  color:#fff;
 }
 
-.card p, .card li{
-  font-size:23px;
+p, li{
+  font-size:22px;
   line-height:1.45;
 }
 
-.card ul{
-  padding-left:25px;
+ul{padding-left:24px;}
+
+.questao{
+  background:#ffffff;
+  color:#002657;
+  padding:18px;
+  border-radius:22px;
+  font-size:21px;
+  line-height:1.45;
+  font-weight:bold;
+}
+
+.alt{
+  background:#073b7d;
+  border:2px solid #78c5ff;
+  border-radius:18px;
+  padding:13px;
+  margin:10px 0;
+  font-size:21px;
+}
+
+.correta{
+  background:#0c7a3d;
+  border:2px solid #8affb7;
+}
+
+.errada{
+  background:#7a1010;
+  border:2px solid #ff8b8b;
 }
 
 .destaque{
-  background:#ffffff;
-  color:#00275c;
-  padding:14px;
+  background:#fff;
+  color:#002657;
   border-radius:18px;
-  font-weight:bold;
+  padding:15px;
   margin:14px 0;
   font-size:23px;
+  font-weight:bold;
 }
 
 .alerta{
   background:#ffef99;
   color:#2a2200;
-  padding:14px;
   border-radius:18px;
-  font-weight:bold;
+  padding:15px;
   margin:14px 0;
   font-size:23px;
+  font-weight:bold;
+}
+
+.formula{
+  background:#001b3d;
+  border:2px dashed #7ec8ff;
+  border-radius:18px;
+  padding:16px;
+  font-size:24px;
+  text-align:center;
+  font-weight:bold;
+  margin:15px 0;
+}
+
+.lancamento{
+  background:#031d41;
+  border-left:6px solid #7ec8ff;
+  padding:15px;
+  border-radius:16px;
+  margin:14px 0;
+  font-size:21px;
+  line-height:1.5;
+}
+
+.resultado{
+  background:#0c7a3d;
+  color:white;
+  border-radius:22px;
+  padding:18px;
+  font-size:26px;
+  text-align:center;
+  font-weight:bold;
+  margin-top:18px;
 }
 
 .nav{
@@ -109,35 +164,33 @@ button{
   padding:18px 10px;
   font-size:22px;
   font-weight:bold;
-  cursor:pointer;
   color:white;
   background:#0057d9;
+  cursor:pointer;
 }
 
-button:hover{
-  background:#0077ff;
-}
+button:hover{background:#0077ff;}
 
 .counter{
   text-align:center;
   font-size:20px;
   margin-top:12px;
   font-weight:bold;
-  color:#cde6ff;
+  color:#d4ecff;
 }
 
 .footer{
   position:fixed;
-  bottom:0;
   left:0;
   right:0;
+  bottom:0;
   background:#001f4d;
   color:white;
   text-align:center;
-  padding:14px 10px;
+  padding:13px 8px;
   font-size:18px;
   font-weight:bold;
-  border-top:3px solid #4da3ff;
+  border-top:3px solid #63b8ff;
 }
 
 </style>
@@ -148,177 +201,184 @@ button:hover{
 <div class="app">
 
   <div class="header">
-    <h1>CPC 06 (R2)</h1>
-    <p>Arrendamentos</p>
+    <h1>Questão Comentada</h1>
+    <p>CPC 06 (R2) — Arrendamentos</p>
   </div>
 
+  <!-- TELA 1 -->
   <div class="card active">
-    <h2>🎯 O que é Arrendamento?</h2>
-    <p>Arrendamento é um contrato que transmite o direito de controlar o uso de um ativo identificado por determinado período, em troca de pagamento.</p>
-    <div class="destaque">Quem usa o bem é o arrendatário. Quem cede o bem é o arrendador.</div>
+    <h2>📘 Dados da Questão</h2>
+    <div class="questao">
+      A empresa Máquinas Fortes S.A. realizou, em 31/12/2024, contrato de arrendamento de uma máquina.
+      <br><br>
+      Vida útil econômica: 8 anos<br>
+      Prestações: 4 anuais de R$ 1.180.912,47<br>
+      Taxa implícita: 7% a.a.<br>
+      Valor justo: R$ 4.200.000<br>
+      Valor presente das prestações: R$ 4.000.000<br>
+      A empresa pretende ficar com a máquina no final.
+    </div>
   </div>
 
+  <!-- TELA 2 -->
   <div class="card">
-    <h2>🚨 Grande mudança do CPC 06 (R2)</h2>
-    <p>A grande mudança ocorreu para o arrendatário.</p>
-    <p>Antes, muitos arrendamentos operacionais ficavam fora do balanço.</p>
-    <div class="destaque">Agora, em regra, o arrendatário reconhece ativo e passivo no balanço.</div>
+    <h2>❓ O que a questão quer?</h2>
+    <p>A questão quer saber qual reconhecimento contábil está correto de acordo com o CPC 06 (R2).</p>
+    <div class="alerta">
+      A grande pegadinha está na depreciação: a empresa pretende ficar com a máquina.
+    </div>
+    <p>Logo, a depreciação será feita pela vida útil econômica total, e não pelo prazo do contrato.</p>
   </div>
 
+  <!-- TELA 3 -->
   <div class="card">
-    <h2>👤 Arrendatário</h2>
-    <p>Na data de início do contrato, o arrendatário deve reconhecer:</p>
+    <h2>📌 Reconhecimento Inicial</h2>
+    <p>Na data de início do contrato, o arrendatário reconhece:</p>
     <ul>
       <li>✅ Ativo de direito de uso</li>
       <li>✅ Passivo de arrendamento</li>
     </ul>
-    <div class="alerta">Atenção: a parcela paga não vira despesa integral diretamente.</div>
+    <div class="destaque">
+      Ambos pelo valor presente das prestações: R$ 4.000.000.
+    </div>
   </div>
 
+  <!-- TELA 4 -->
   <div class="card">
-    <h2>💡 Isenções</h2>
-    <p>O arrendatário pode reconhecer direto como despesa quando for:</p>
-    <ul>
-      <li>✅ Arrendamento de curto prazo: até 12 meses</li>
-      <li>✅ Ativo de baixo valor: exemplo, notebook ou telefone</li>
-    </ul>
-    <div class="alerta">Pegadinha: nem tudo obrigatoriamente vai para o balanço.</div>
+    <h2>🧾 Lançamento Inicial</h2>
+    <div class="lancamento">
+      D — Ativo de Direito de Uso: R$ 4.000.000<br>
+      C — Passivo de Arrendamento: R$ 4.000.000
+    </div>
+    <p>Esse é o reconhecimento líquido do arrendamento na data inicial.</p>
   </div>
 
+  <!-- TELA 5 -->
   <div class="card">
-    <h2>🏛 Arrendador</h2>
-    <p>Para o arrendador, a lógica continua com duas classificações:</p>
-    <ul>
-      <li>📌 Arrendamento financeiro</li>
-      <li>📌 Arrendamento operacional</li>
-    </ul>
+    <h2>🧾 Outra Forma de Registro</h2>
+    <p>Também é possível registrar o passivo pelo valor total das prestações e destacar os juros a transcorrer.</p>
+    <div class="lancamento">
+      D — Ativo de Direito de Uso: R$ 4.000.000<br>
+      D — Encargos Financeiros a Transcorrer: R$ 723.649,88<br>
+      C — Passivo de Arrendamento: R$ 4.723.649,88
+    </div>
+    <div class="alerta">
+      O efeito líquido do passivo continua sendo R$ 4.000.000.
+    </div>
   </div>
 
+  <!-- TELA 6 -->
   <div class="card">
-    <h2>💰 Arrendamento Financeiro</h2>
-    <p>Ocorre quando há transferência substancial dos riscos e benefícios da propriedade do ativo.</p>
-    <div class="destaque">O arrendador retira o bem do balanço e reconhece um valor a receber.</div>
+    <h2>📉 Depreciação em 2025</h2>
+    <p>Como a empresa pretende ficar com a máquina no final do contrato, deve depreciar pela vida útil econômica total.</p>
+    <div class="formula">
+      Depreciação = 4.000.000 ÷ 8
+    </div>
+    <div class="resultado">
+      Depreciação = R$ 500.000
+    </div>
   </div>
 
+  <!-- TELA 7 -->
   <div class="card">
-    <h2>🏢 Arrendamento Operacional</h2>
-    <p>Ocorre quando não há transferência substancial dos riscos e benefícios.</p>
-    <ul>
-      <li>✅ O ativo permanece no balanço do arrendador</li>
-      <li>✅ O arrendador continua depreciando</li>
-      <li>✅ Reconhece receita de aluguel</li>
-    </ul>
+    <h2>🧾 Lançamento da Depreciação</h2>
+    <div class="lancamento">
+      D — Despesa de Depreciação: R$ 500.000<br>
+      C — Depreciação Acumulada: R$ 500.000
+    </div>
+    <p>Essa despesa reduz o resultado de 2025.</p>
   </div>
 
+  <!-- TELA 8 -->
   <div class="card">
-    <h2>🚨 Indicadores de Financeiro</h2>
-    <ul>
-      <li>✅ Prazo equivale à maior parte da vida econômica</li>
-      <li>✅ Ativo altamente especializado</li>
-      <li>✅ Valor presente das parcelas equivale substancialmente ao valor justo do ativo</li>
-    </ul>
+    <h2>💰 Juros de 2025</h2>
+    <p>O passivo de arrendamento gera despesa financeira pela taxa implícita de 7% ao ano.</p>
+    <div class="formula">
+      Juros = 7% × 4.000.000
+    </div>
+    <div class="resultado">
+      Juros = R$ 280.000
+    </div>
   </div>
 
+  <!-- TELA 9 -->
   <div class="card">
-    <h2>⚠ Pegadinha Clássica</h2>
-    <p>A banca pode trocar:</p>
-    <div class="alerta">Valor justo do ativo por custo de aquisição.</div>
-    <p>Esse detalhe pode derrubar o aluno na prova.</p>
+    <h2>🧾 Lançamento dos Juros</h2>
+    <div class="lancamento">
+      D — Despesa Financeira: R$ 280.000<br>
+      C — Passivo de Arrendamento: R$ 280.000
+    </div>
+    <p>Essa despesa financeira também reduz o resultado de 2025.</p>
   </div>
 
+  <!-- TELA 10 -->
   <div class="card">
-    <h2>🏭 Arrendador Fabricante</h2>
-    <p>Se o fabricante fizer arrendamento financeiro, ele reconhece logo no início:</p>
-    <ul>
-      <li>✅ Receita</li>
-      <li>✅ Custo da venda</li>
-      <li>✅ Resultado na venda</li>
-    </ul>
+    <h2>📊 Impacto na DRE</h2>
+    <p>O impacto no resultado não é o valor da prestação paga.</p>
+    <p>O impacto correto é:</p>
+    <div class="formula">
+      Depreciação + Juros
+    </div>
+    <div class="formula">
+      500.000 + 280.000
+    </div>
+    <div class="resultado">
+      Impacto negativo = R$ 780.000
+    </div>
   </div>
 
+  <!-- TELA 11 -->
   <div class="card">
-    <h2>⚙ Passo 1: Reconhecimento Inicial</h2>
-    <p>O passivo de arrendamento corresponde ao valor presente das parcelas futuras ainda não pagas.</p>
-    <div class="destaque">As parcelas são descontadas pela taxa de juros implícita no contrato.</div>
+    <h2>✅ Análise das Alternativas</h2>
+    <div class="alt errada">
+      a) Errada. O ativo não é R$ 4.200.000. O reconhecimento inicial é pelo valor presente: R$ 4.000.000.
+    </div>
+    <div class="alt errada">
+      b) Errada. A depreciação não é R$ 1.000.000, pois não se usa o prazo de 4 anos.
+    </div>
+    <div class="alt correta">
+      c) Correta. O impacto negativo no resultado de 2025 é R$ 780.000.
+    </div>
   </div>
 
+  <!-- TELA 12 -->
   <div class="card">
-    <h2>📌 Ativo de Direito de Uso</h2>
-    <p>O ativo de direito de uso é mensurado ao custo.</p>
-    <ul>
-      <li>✅ Valor inicial do passivo</li>
-      <li>✅ Custos iniciais</li>
-      <li>✅ Pagamentos antecipados</li>
-    </ul>
+    <h2>✅ Continuação das Alternativas</h2>
+    <div class="alt errada">
+      d) Errada. A prestação de R$ 1.180.912,47 não vai integralmente para despesa.
+    </div>
+    <div class="alt errada">
+      e) Errada. O passivo líquido inicial é R$ 4.000.000, e não R$ 4.723.649,88.
+    </div>
+    <div class="resultado">
+      Gabarito: Letra C
+    </div>
   </div>
 
+  <!-- TELA 13 -->
   <div class="card">
-    <h2>📉 Passo 2: Depreciação</h2>
-    <p>Essa é uma das maiores pegadinhas do CPC 06.</p>
-    <div class="alerta">Antes de depreciar, veja se o arrendatário vai ficar com o bem.</div>
+    <h2>🔥 Macete de Prova</h2>
+    <div class="destaque">
+      Se o arrendatário pretende ficar com o bem, a depreciação é pela vida útil econômica.
+    </div>
+    <div class="alerta">
+      Para achar o impacto na DRE, some: depreciação + juros.
+    </div>
   </div>
 
-  <div class="card">
-    <h2>✅ Vai ficar com o bem?</h2>
-    <p>Se houver transferência da propriedade ou certeza razoável de exercer a opção de compra:</p>
-    <div class="destaque">Deprecia pela VIDA ÚTIL do ativo.</div>
-  </div>
-
-  <div class="card">
-    <h2>❌ Não vai ficar com o bem?</h2>
-    <p>Se não houver transferência nem certeza razoável de compra:</p>
-    <div class="destaque">Deprecia pelo menor prazo entre vida útil e prazo do contrato.</div>
-  </div>
-
-  <div class="card">
-    <h2>📊 Passo 3: DRE</h2>
-    <p>Na Demonstração do Resultado, não se lança a parcela inteira como despesa.</p>
-    <p>Devem aparecer separadamente:</p>
-    <ul>
-      <li>✅ Despesa de depreciação</li>
-      <li>✅ Despesa financeira</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>💵 Juros</h2>
-    <p>A despesa financeira é calculada aplicando a taxa de juros sobre o saldo do passivo.</p>
-    <div class="destaque">Juros = taxa × saldo do passivo</div>
-  </div>
-
-  <div class="card">
-    <h2>📌 Parcela Paga</h2>
-    <p>A parcela paga serve para reduzir o passivo de arrendamento.</p>
-    <div class="alerta">Cuidado: a parcela não é lançada integralmente como despesa.</div>
-  </div>
-
-  <div class="card">
-    <h2>🎯 Impacto na DRE</h2>
-    <p>Quando a questão pedir o impacto total no resultado, some:</p>
-    <div class="destaque">Depreciação + Juros</div>
-  </div>
-
-  <div class="card">
-    <h2>🧠 Pegadinha Fiscal</h2>
-    <p>A regra fiscal não altera a contabilidade societária.</p>
-    <p>Informações sobre dedutibilidade, LALUR ou vida útil fiscal podem ser iscas da banca.</p>
-    <div class="alerta">Para o CPC 06, siga a norma contábil.</div>
-  </div>
-
+  <!-- TELA 14 -->
   <div class="card">
     <h2>🚀 Resumo Final</h2>
     <ul>
-      <li>✅ Arrendatário reconhece ativo e passivo</li>
-      <li>✅ Curto prazo e baixo valor podem ser despesa</li>
-      <li>✅ Vai ficar com o bem: deprecia pela vida útil</li>
-      <li>✅ DRE: depreciação + juros</li>
+      <li>Ativo inicial: R$ 4.000.000</li>
+      <li>Passivo inicial: R$ 4.000.000</li>
+      <li>Depreciação: R$ 500.000</li>
+      <li>Juros: R$ 280.000</li>
+      <li>Impacto na DRE: R$ 780.000</li>
     </ul>
-  </div>
-
-  <div class="card">
-    <h2>🔥 Frase para Memorizar</h2>
-    <p>O CPC 06 mudou a vida do arrendatário.</p>
-    <div class="destaque">Ativo e passivo no balanço; na DRE, depreciação e juros.</div>
+    <div class="resultado">
+      Resposta: C
+    </div>
   </div>
 
   <div class="nav">
@@ -344,6 +404,7 @@ function mostrarCard(){
   cards.forEach(card => card.classList.remove('active'));
   cards[atual].classList.add('active');
   counter.innerHTML = "Tela " + (atual + 1) + " de " + cards.length;
+  window.scrollTo({top:0, behavior:'smooth'});
 }
 
 function proxima(){
