@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Questão CPC 06 - Arrendamento</title>
+<title>FCC - Questão CPC 06</title>
 
 <style>
 *{box-sizing:border-box;}
@@ -12,7 +12,7 @@ body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   background:linear-gradient(180deg,#06182f,#082f63,#06182f);
-  color:#fff;
+  color:white;
 }
 
 .app{
@@ -30,6 +30,17 @@ body{
   padding:24px 16px;
   text-align:center;
   margin-bottom:16px;
+}
+
+.banca{
+  background:#ffffff;
+  color:#002657;
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:18px;
+  font-size:24px;
+  font-weight:900;
+  margin-bottom:12px;
 }
 
 .header h1{
@@ -59,8 +70,6 @@ body{
 h2{
   font-size:29px;
   margin-top:0;
-  line-height:1.18;
-  color:#fff;
 }
 
 p, li{
@@ -71,7 +80,7 @@ p, li{
 ul{padding-left:24px;}
 
 .questao{
-  background:#ffffff;
+  background:white;
   color:#002657;
   padding:18px;
   border-radius:22px;
@@ -100,7 +109,7 @@ ul{padding-left:24px;}
 }
 
 .destaque{
-  background:#fff;
+  background:white;
   color:#002657;
   border-radius:18px;
   padding:15px;
@@ -169,8 +178,6 @@ button{
   cursor:pointer;
 }
 
-button:hover{background:#0077ff;}
-
 .counter{
   text-align:center;
   font-size:20px;
@@ -192,7 +199,6 @@ button:hover{background:#0077ff;}
   font-weight:bold;
   border-top:3px solid #63b8ff;
 }
-
 </style>
 </head>
 
@@ -200,199 +206,124 @@ button:hover{background:#0077ff;}
 
 <div class="app">
 
-  <div class="header">
-    <h1>Questão Comentada</h1>
-    <p>CPC 06 (R2) — Arrendamentos</p>
-  </div>
+<div class="header">
+  <div class="banca">BANCA FCC</div>
+  <h1>Questão Comentada</h1>
+  <p>AFRE — SEFAZ SP — 2026</p>
+  <p>CPC 06 (R2) — Arrendamentos</p>
+</div>
 
-  <!-- TELA 1 -->
-  <div class="card active">
-    <h2>📘 Dados da Questão</h2>
-    <div class="questao">
-      A empresa Máquinas Fortes S.A. realizou, em 31/12/2024, contrato de arrendamento de uma máquina.
-      <br><br>
-      Vida útil econômica: 8 anos<br>
-      Prestações: 4 anuais de R$ 1.180.912,47<br>
-      Taxa implícita: 7% a.a.<br>
-      Valor justo: R$ 4.200.000<br>
-      Valor presente das prestações: R$ 4.000.000<br>
-      A empresa pretende ficar com a máquina no final.
-    </div>
-  </div>
+<div class="card active">
+<h2>📘 Enunciado</h2>
+<div class="questao">
+A empresa Máquinas Fortes S.A. realizou, em 31/12/2024, um contrato de arrendamento de uma máquina para utilizar em suas operações.
+<br><br>
+Vida útil: 8 anos<br>
+Prestações: 4 anuais de R$ 1.180.912,47<br>
+Taxa implícita: 7% a.a.<br>
+Valor justo: R$ 4.200.000<br>
+Valor presente: R$ 4.000.000<br>
+A empresa pretende ficar com a máquina no final.
+</div>
+</div>
 
-  <!-- TELA 2 -->
-  <div class="card">
-    <h2>❓ O que a questão quer?</h2>
-    <p>A questão quer saber qual reconhecimento contábil está correto de acordo com o CPC 06 (R2).</p>
-    <div class="alerta">
-      A grande pegadinha está na depreciação: a empresa pretende ficar com a máquina.
-    </div>
-    <p>Logo, a depreciação será feita pela vida útil econômica total, e não pelo prazo do contrato.</p>
-  </div>
+<div class="card">
+<h2>❓ O que a FCC quer?</h2>
+<p>A FCC quer saber qual reconhecimento está correto no arrendamento.</p>
+<div class="alerta">
+A pegadinha está no prazo da depreciação.
+</div>
+<p>Como a empresa pretende ficar com o bem, a depreciação será pela vida útil econômica total.</p>
+</div>
 
-  <!-- TELA 3 -->
-  <div class="card">
-    <h2>📌 Reconhecimento Inicial</h2>
-    <p>Na data de início do contrato, o arrendatário reconhece:</p>
-    <ul>
-      <li>✅ Ativo de direito de uso</li>
-      <li>✅ Passivo de arrendamento</li>
-    </ul>
-    <div class="destaque">
-      Ambos pelo valor presente das prestações: R$ 4.000.000.
-    </div>
-  </div>
+<div class="card">
+<h2>📌 Reconhecimento Inicial</h2>
+<p>Na data inicial, a arrendatária reconhece:</p>
+<ul>
+<li>✅ Ativo de Direito de Uso</li>
+<li>✅ Passivo de Arrendamento</li>
+</ul>
+<div class="destaque">
+Valor reconhecido: R$ 4.000.000
+</div>
+</div>
 
-  <!-- TELA 4 -->
-  <div class="card">
-    <h2>🧾 Lançamento Inicial</h2>
-    <div class="lancamento">
-      D — Ativo de Direito de Uso: R$ 4.000.000<br>
-      C — Passivo de Arrendamento: R$ 4.000.000
-    </div>
-    <p>Esse é o reconhecimento líquido do arrendamento na data inicial.</p>
-  </div>
+<div class="card">
+<h2>🧾 Lançamento Inicial</h2>
+<div class="lancamento">
+D — Ativo de Direito de Uso: R$ 4.000.000<br>
+C — Passivo de Arrendamento: R$ 4.000.000
+</div>
+</div>
 
-  <!-- TELA 5 -->
-  <div class="card">
-    <h2>🧾 Outra Forma de Registro</h2>
-    <p>Também é possível registrar o passivo pelo valor total das prestações e destacar os juros a transcorrer.</p>
-    <div class="lancamento">
-      D — Ativo de Direito de Uso: R$ 4.000.000<br>
-      D — Encargos Financeiros a Transcorrer: R$ 723.649,88<br>
-      C — Passivo de Arrendamento: R$ 4.723.649,88
-    </div>
-    <div class="alerta">
-      O efeito líquido do passivo continua sendo R$ 4.000.000.
-    </div>
-  </div>
+<div class="card">
+<h2>📉 Depreciação</h2>
+<p>Como a empresa pretende ficar com a máquina:</p>
+<div class="formula">
+R$ 4.000.000 ÷ 8 anos
+</div>
+<div class="resultado">
+Depreciação = R$ 500.000
+</div>
+</div>
 
-  <!-- TELA 6 -->
-  <div class="card">
-    <h2>📉 Depreciação em 2025</h2>
-    <p>Como a empresa pretende ficar com a máquina no final do contrato, deve depreciar pela vida útil econômica total.</p>
-    <div class="formula">
-      Depreciação = 4.000.000 ÷ 8
-    </div>
-    <div class="resultado">
-      Depreciação = R$ 500.000
-    </div>
-  </div>
+<div class="card">
+<h2>💰 Juros</h2>
+<p>O passivo gera despesa financeira de 7% ao ano.</p>
+<div class="formula">
+7% × R$ 4.000.000
+</div>
+<div class="resultado">
+Juros = R$ 280.000
+</div>
+</div>
 
-  <!-- TELA 7 -->
-  <div class="card">
-    <h2>🧾 Lançamento da Depreciação</h2>
-    <div class="lancamento">
-      D — Despesa de Depreciação: R$ 500.000<br>
-      C — Depreciação Acumulada: R$ 500.000
-    </div>
-    <p>Essa despesa reduz o resultado de 2025.</p>
-  </div>
+<div class="card">
+<h2>📊 Impacto na DRE</h2>
+<p>O impacto no resultado é:</p>
+<div class="formula">
+Depreciação + Juros
+</div>
+<div class="formula">
+R$ 500.000 + R$ 280.000
+</div>
+<div class="resultado">
+Impacto negativo = R$ 780.000
+</div>
+</div>
 
-  <!-- TELA 8 -->
-  <div class="card">
-    <h2>💰 Juros de 2025</h2>
-    <p>O passivo de arrendamento gera despesa financeira pela taxa implícita de 7% ao ano.</p>
-    <div class="formula">
-      Juros = 7% × 4.000.000
-    </div>
-    <div class="resultado">
-      Juros = R$ 280.000
-    </div>
-  </div>
+<div class="card">
+<h2>✅ Gabarito FCC</h2>
+<div class="alt errada">a) Errada — o ativo não é R$ 4.200.000.</div>
+<div class="alt errada">b) Errada — a depreciação não é R$ 1.000.000.</div>
+<div class="alt correta">c) Correta — impacto negativo de R$ 780.000.</div>
+<div class="alt errada">d) Errada — a parcela não vai integralmente para despesa.</div>
+<div class="alt errada">e) Errada — o passivo líquido inicial é R$ 4.000.000.</div>
+<div class="resultado">Resposta: LETRA C</div>
+</div>
 
-  <!-- TELA 9 -->
-  <div class="card">
-    <h2>🧾 Lançamento dos Juros</h2>
-    <div class="lancamento">
-      D — Despesa Financeira: R$ 280.000<br>
-      C — Passivo de Arrendamento: R$ 280.000
-    </div>
-    <p>Essa despesa financeira também reduz o resultado de 2025.</p>
-  </div>
+<div class="card">
+<h2>🔥 Macete Final</h2>
+<div class="destaque">
+Vai ficar com o bem? Deprecia pela vida útil.
+</div>
+<div class="alerta">
+Pediu impacto na DRE? Some depreciação + juros.
+</div>
+</div>
 
-  <!-- TELA 10 -->
-  <div class="card">
-    <h2>📊 Impacto na DRE</h2>
-    <p>O impacto no resultado não é o valor da prestação paga.</p>
-    <p>O impacto correto é:</p>
-    <div class="formula">
-      Depreciação + Juros
-    </div>
-    <div class="formula">
-      500.000 + 280.000
-    </div>
-    <div class="resultado">
-      Impacto negativo = R$ 780.000
-    </div>
-  </div>
+<div class="nav">
+<button onclick="voltar()">⬅ Voltar</button>
+<button onclick="proxima()">Próxima ➡</button>
+</div>
 
-  <!-- TELA 11 -->
-  <div class="card">
-    <h2>✅ Análise das Alternativas</h2>
-    <div class="alt errada">
-      a) Errada. O ativo não é R$ 4.200.000. O reconhecimento inicial é pelo valor presente: R$ 4.000.000.
-    </div>
-    <div class="alt errada">
-      b) Errada. A depreciação não é R$ 1.000.000, pois não se usa o prazo de 4 anos.
-    </div>
-    <div class="alt correta">
-      c) Correta. O impacto negativo no resultado de 2025 é R$ 780.000.
-    </div>
-  </div>
-
-  <!-- TELA 12 -->
-  <div class="card">
-    <h2>✅ Continuação das Alternativas</h2>
-    <div class="alt errada">
-      d) Errada. A prestação de R$ 1.180.912,47 não vai integralmente para despesa.
-    </div>
-    <div class="alt errada">
-      e) Errada. O passivo líquido inicial é R$ 4.000.000, e não R$ 4.723.649,88.
-    </div>
-    <div class="resultado">
-      Gabarito: Letra C
-    </div>
-  </div>
-
-  <!-- TELA 13 -->
-  <div class="card">
-    <h2>🔥 Macete de Prova</h2>
-    <div class="destaque">
-      Se o arrendatário pretende ficar com o bem, a depreciação é pela vida útil econômica.
-    </div>
-    <div class="alerta">
-      Para achar o impacto na DRE, some: depreciação + juros.
-    </div>
-  </div>
-
-  <!-- TELA 14 -->
-  <div class="card">
-    <h2>🚀 Resumo Final</h2>
-    <ul>
-      <li>Ativo inicial: R$ 4.000.000</li>
-      <li>Passivo inicial: R$ 4.000.000</li>
-      <li>Depreciação: R$ 500.000</li>
-      <li>Juros: R$ 280.000</li>
-      <li>Impacto na DRE: R$ 780.000</li>
-    </ul>
-    <div class="resultado">
-      Resposta: C
-    </div>
-  </div>
-
-  <div class="nav">
-    <button onclick="voltar()">⬅ Voltar</button>
-    <button onclick="proxima()">Próxima ➡</button>
-  </div>
-
-  <div class="counter" id="counter"></div>
+<div class="counter" id="counter"></div>
 
 </div>
 
 <div class="footer">
-  Curso de Contabilidade Professor Moreira<br>
-  WhatsApp: 61 985323574
+Curso de Contabilidade Professor Moreira<br>
+WhatsApp: 61 985323574
 </div>
 
 <script>
