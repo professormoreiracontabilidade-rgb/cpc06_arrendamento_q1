@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPC 06 (R2) - Arrendamentos</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(180deg,#03152e,#062b5f,#03152e);
+  color:white;
+}
+
+.app{
+  max-width:430px;
+  margin:auto;
+  min-height:100vh;
+  padding:16px;
+  padding-bottom:95px;
+}
+
+.header{
+  background:linear-gradient(135deg,#001f4d,#003b8f,#0057d9);
+  padding:24px 18px;
+  border-radius:26px;
+  text-align:center;
+  margin-bottom:18px;
+  border:2px solid #4da3ff;
+}
+
+.header h1{
+  font-size:30px;
+  margin:0;
+  line-height:1.2;
+}
+
+.header p{
+  font-size:20px;
+  margin:10px 0 0;
+  font-weight:bold;
+}
+
+.card{
+  display:none;
+  background:#082b5f;
+  border:2px solid #5bb0ff;
+  border-radius:28px;
+  padding:26px 22px;
+  min-height:520px;
+  box-shadow:0 8px 22px rgba(0,0,0,.35);
+}
+
+.card.active{
+  display:block;
+}
+
+.card h2{
+  font-size:30px;
+  margin-top:0;
+  color:#ffffff;
+  line-height:1.2;
+}
+
+.card p, .card li{
+  font-size:23px;
+  line-height:1.45;
+}
+
+.card ul{
+  padding-left:25px;
+}
+
+.destaque{
+  background:#ffffff;
+  color:#00275c;
+  padding:14px;
+  border-radius:18px;
+  font-weight:bold;
+  margin:14px 0;
+  font-size:23px;
+}
+
+.alerta{
+  background:#ffef99;
+  color:#2a2200;
+  padding:14px;
+  border-radius:18px;
+  font-weight:bold;
+  margin:14px 0;
+  font-size:23px;
+}
+
+.nav{
+  display:flex;
+  gap:12px;
+  margin-top:18px;
+}
+
+button{
+  flex:1;
+  border:none;
+  border-radius:18px;
+  padding:18px 10px;
+  font-size:22px;
+  font-weight:bold;
+  cursor:pointer;
+  color:white;
+  background:#0057d9;
+}
+
+button:hover{
+  background:#0077ff;
+}
+
+.counter{
+  text-align:center;
+  font-size:20px;
+  margin-top:12px;
+  font-weight:bold;
+  color:#cde6ff;
+}
+
+.footer{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#001f4d;
+  color:white;
+  text-align:center;
+  padding:14px 10px;
+  font-size:18px;
+  font-weight:bold;
+  border-top:3px solid #4da3ff;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="header">
+    <h1>CPC 06 (R2)</h1>
+    <p>Arrendamentos</p>
+  </div>
+
+  <div class="card active">
+    <h2>🎯 O que é Arrendamento?</h2>
+    <p>Arrendamento é um contrato que transmite o direito de controlar o uso de um ativo identificado por determinado período, em troca de pagamento.</p>
+    <div class="destaque">Quem usa o bem é o arrendatário. Quem cede o bem é o arrendador.</div>
+  </div>
+
+  <div class="card">
+    <h2>🚨 Grande mudança do CPC 06 (R2)</h2>
+    <p>A grande mudança ocorreu para o arrendatário.</p>
+    <p>Antes, muitos arrendamentos operacionais ficavam fora do balanço.</p>
+    <div class="destaque">Agora, em regra, o arrendatário reconhece ativo e passivo no balanço.</div>
+  </div>
+
+  <div class="card">
+    <h2>👤 Arrendatário</h2>
+    <p>Na data de início do contrato, o arrendatário deve reconhecer:</p>
+    <ul>
+      <li>✅ Ativo de direito de uso</li>
+      <li>✅ Passivo de arrendamento</li>
+    </ul>
+    <div class="alerta">Atenção: a parcela paga não vira despesa integral diretamente.</div>
+  </div>
+
+  <div class="card">
+    <h2>💡 Isenções</h2>
+    <p>O arrendatário pode reconhecer direto como despesa quando for:</p>
+    <ul>
+      <li>✅ Arrendamento de curto prazo: até 12 meses</li>
+      <li>✅ Ativo de baixo valor: exemplo, notebook ou telefone</li>
+    </ul>
+    <div class="alerta">Pegadinha: nem tudo obrigatoriamente vai para o balanço.</div>
+  </div>
+
+  <div class="card">
+    <h2>🏛 Arrendador</h2>
+    <p>Para o arrendador, a lógica continua com duas classificações:</p>
+    <ul>
+      <li>📌 Arrendamento financeiro</li>
+      <li>📌 Arrendamento operacional</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>💰 Arrendamento Financeiro</h2>
+    <p>Ocorre quando há transferência substancial dos riscos e benefícios da propriedade do ativo.</p>
+    <div class="destaque">O arrendador retira o bem do balanço e reconhece um valor a receber.</div>
+  </div>
+
+  <div class="card">
+    <h2>🏢 Arrendamento Operacional</h2>
+    <p>Ocorre quando não há transferência substancial dos riscos e benefícios.</p>
+    <ul>
+      <li>✅ O ativo permanece no balanço do arrendador</li>
+      <li>✅ O arrendador continua depreciando</li>
+      <li>✅ Reconhece receita de aluguel</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🚨 Indicadores de Financeiro</h2>
+    <ul>
+      <li>✅ Prazo equivale à maior parte da vida econômica</li>
+      <li>✅ Ativo altamente especializado</li>
+      <li>✅ Valor presente das parcelas equivale substancialmente ao valor justo do ativo</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>⚠ Pegadinha Clássica</h2>
+    <p>A banca pode trocar:</p>
+    <div class="alerta">Valor justo do ativo por custo de aquisição.</div>
+    <p>Esse detalhe pode derrubar o aluno na prova.</p>
+  </div>
+
+  <div class="card">
+    <h2>🏭 Arrendador Fabricante</h2>
+    <p>Se o fabricante fizer arrendamento financeiro, ele reconhece logo no início:</p>
+    <ul>
+      <li>✅ Receita</li>
+      <li>✅ Custo da venda</li>
+      <li>✅ Resultado na venda</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>⚙ Passo 1: Reconhecimento Inicial</h2>
+    <p>O passivo de arrendamento corresponde ao valor presente das parcelas futuras ainda não pagas.</p>
+    <div class="destaque">As parcelas são descontadas pela taxa de juros implícita no contrato.</div>
+  </div>
+
+  <div class="card">
+    <h2>📌 Ativo de Direito de Uso</h2>
+    <p>O ativo de direito de uso é mensurado ao custo.</p>
+    <ul>
+      <li>✅ Valor inicial do passivo</li>
+      <li>✅ Custos iniciais</li>
+      <li>✅ Pagamentos antecipados</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📉 Passo 2: Depreciação</h2>
+    <p>Essa é uma das maiores pegadinhas do CPC 06.</p>
+    <div class="alerta">Antes de depreciar, veja se o arrendatário vai ficar com o bem.</div>
+  </div>
+
+  <div class="card">
+    <h2>✅ Vai ficar com o bem?</h2>
+    <p>Se houver transferência da propriedade ou certeza razoável de exercer a opção de compra:</p>
+    <div class="destaque">Deprecia pela VIDA ÚTIL do ativo.</div>
+  </div>
+
+  <div class="card">
+    <h2>❌ Não vai ficar com o bem?</h2>
+    <p>Se não houver transferência nem certeza razoável de compra:</p>
+    <div class="destaque">Deprecia pelo menor prazo entre vida útil e prazo do contrato.</div>
+  </div>
+
+  <div class="card">
+    <h2>📊 Passo 3: DRE</h2>
+    <p>Na Demonstração do Resultado, não se lança a parcela inteira como despesa.</p>
+    <p>Devem aparecer separadamente:</p>
+    <ul>
+      <li>✅ Despesa de depreciação</li>
+      <li>✅ Despesa financeira</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>💵 Juros</h2>
+    <p>A despesa financeira é calculada aplicando a taxa de juros sobre o saldo do passivo.</p>
+    <div class="destaque">Juros = taxa × saldo do passivo</div>
+  </div>
+
+  <div class="card">
+    <h2>📌 Parcela Paga</h2>
+    <p>A parcela paga serve para reduzir o passivo de arrendamento.</p>
+    <div class="alerta">Cuidado: a parcela não é lançada integralmente como despesa.</div>
+  </div>
+
+  <div class="card">
+    <h2>🎯 Impacto na DRE</h2>
+    <p>Quando a questão pedir o impacto total no resultado, some:</p>
+    <div class="destaque">Depreciação + Juros</div>
+  </div>
+
+  <div class="card">
+    <h2>🧠 Pegadinha Fiscal</h2>
+    <p>A regra fiscal não altera a contabilidade societária.</p>
+    <p>Informações sobre dedutibilidade, LALUR ou vida útil fiscal podem ser iscas da banca.</p>
+    <div class="alerta">Para o CPC 06, siga a norma contábil.</div>
+  </div>
+
+  <div class="card">
+    <h2>🚀 Resumo Final</h2>
+    <ul>
+      <li>✅ Arrendatário reconhece ativo e passivo</li>
+      <li>✅ Curto prazo e baixo valor podem ser despesa</li>
+      <li>✅ Vai ficar com o bem: deprecia pela vida útil</li>
+      <li>✅ DRE: depreciação + juros</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🔥 Frase para Memorizar</h2>
+    <p>O CPC 06 mudou a vida do arrendatário.</p>
+    <div class="destaque">Ativo e passivo no balanço; na DRE, depreciação e juros.</div>
+  </div>
+
+  <div class="nav">
+    <button onclick="voltar()">⬅ Voltar</button>
+    <button onclick="proxima()">Próxima ➡</button>
+  </div>
+
+  <div class="counter" id="counter"></div>
+
+</div>
+
+<div class="footer">
+  Curso de Contabilidade Professor Moreira<br>
+  WhatsApp: 61 985323574
+</div>
+
+<script>
+let atual = 0;
+const cards = document.querySelectorAll('.card');
+const counter = document.getElementById('counter');
+
+function mostrarCard(){
+  cards.forEach(card => card.classList.remove('active'));
+  cards[atual].classList.add('active');
+  counter.innerHTML = "Tela " + (atual + 1) + " de " + cards.length;
+}
+
+function proxima(){
+  if(atual < cards.length - 1){
+    atual++;
+    mostrarCard();
+  }
+}
+
+function voltar(){
+  if(atual > 0){
+    atual--;
+    mostrarCard();
+  }
+}
+
+mostrarCard();
+</script>
+
+</body>
+</html>
